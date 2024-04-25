@@ -4,6 +4,12 @@
     margin: 20px;
     border-radius: 16px;
     padding: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease;
+}
+
+.navbar.scrolled {
+    background-color: #ffffffc4;
 }
 
 .navbar-brand {
@@ -19,11 +25,22 @@
     padding: 8px 20px;
     border-radius: 50px;
     text-decoration: none;
+    transition: all 0.9s ease background-color;
+}
+
+.btn {
+    background-color: #009970;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
     transition: 0.3s background-color;
 }
 
-.login-button:hover {
+.login-button:hover, .login-button:focus, .btn:hover, .btn:focus {
     background-color: #00b383;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);    
 }
 
 .navbar-toggler {
@@ -44,7 +61,8 @@
 
 .nav-link {
     color: #666777;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 20px;
     position: relative;
 }
 
@@ -61,10 +79,10 @@
         left: 50%;
         transform: translateX(-50%);
         width: 0;
-        height: 2px;
+        height: 3px;
         background-color: #009970;
         visibility: hidden;
-        transition: 0, 3s ease-in-out;
+        transition: all, 0.3s ease;
     }
 
     .nav-link:hover::before,
@@ -76,6 +94,7 @@
 }
 
 .hero-section {
+    position: relative;
     background: url(../Images/hero.png) no-repeat center;
     background-size: 75%;
     background-attachment: fixed;
@@ -91,11 +110,12 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 1;
 }
 
 .hero-section .container {
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
     position: relative;
 }
 
@@ -121,10 +141,46 @@
     transition: 0.3s background-color;
 }
 
+.hero-section .login-button {
+    margin-top: 80px;
+}
+
 .hero-section .login-button:hover, .About-section .login-button {
     background-color: #00b383;
 }
 
+.hero-section, .About-section, .our-services {
+    border-radius: 20px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.About-section .img {
+    box-shadow:  0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    object-fit: cover;
+    box-shadow:  0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 5px;
+}
+
+.our-services .image { 
+    position: relative;
+    height: 550px;
+    background-image: url(../Images/about-1.jpg);
+    background-size: cover;
+    padding: 0;
+}
 
 
 
