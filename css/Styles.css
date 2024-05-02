@@ -1,7 +1,7 @@
 .navbar {
     background-color: #fff;
     height: 70px;
-    margin: 20px;
+    margin: 13px;
     border-radius: 16px;
     padding: 0.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -25,7 +25,7 @@
     padding: 8px 20px;
     border-radius: 50px;
     text-decoration: none;
-    transition: all 0.9s ease background-color;
+    transition: all 2s ease-out background-color;
 }
 
 .btn {
@@ -34,12 +34,12 @@
     border: none;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.3s background-color;
+    transition: all 2s ease-out background-color;
 }
 
 .login-button:hover, .login-button:focus, .btn:hover, .btn:focus {
     background-color: #00b383;
-    transform: translateY(-3px);
+    transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);    
 }
 
@@ -96,7 +96,8 @@
 .hero-section {
     position: relative;
     background: url(../Images/hero.png) no-repeat center;
-    background-size: 75%;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
@@ -149,38 +150,53 @@
     background-color: #00b383;
 }
 
-.hero-section, .About-section, .our-services {
-    border-radius: 20px;
-    padding: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.About-section .img {
-    box-shadow:  0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-.card {
-    object-fit: cover;
-    box-shadow:  0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.card-img-top {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 5px;
-}
-
-.our-services .image { 
-    position: relative;
-    height: 550px;
-    background-image: url(../Images/about-1.jpg);
+.About-section {
+    background-image: url(../Images/about-background.jpg);
     background-size: cover;
-    padding: 0;
+    background-position: center;
 }
+
+.About-section .about {
+    border-radius: 16px;
+}
+
+.About-section, .our-services {
+    box-sizing: border-box;
+    width: 98%;
+    margin: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.row .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card-cover {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.card-cover .card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.d-flex {
+    position: relative;
+    z-index: 1;
+}
+
+
 
 
 

@@ -1,1 +1,5 @@
-Images/bg_3.jpg
+*.jpg
+
+*.png
+
+*.svg

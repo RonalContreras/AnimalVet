@@ -8,7 +8,12 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/Styles.css">
     <script src="Js/main.js"></script>
 </head>
@@ -19,7 +24,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <img src="Images/Logo.png" alt="AnimalVet" width="40" height="32">
-            <a class="navbar-brand me-auto" href="index.html">AnimalVet</a>
+            <a class="navbar-brand me-auto fs-3" href="index.html">Animal<span style="color: #009970;">Vet</span></a>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
@@ -71,7 +76,7 @@
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
                         <p style="vertical-align: inherit;">
-                        <p style="vertical-align: inherit;">Acerca de <span style="color: #009970;">AnimalVet</span>
+                        <p style="vertical-align: inherit;">Acerca de Animal<span style="color: #009970;">Vet</span>
                         </p>
                         </p>
                     </h1>
@@ -82,13 +87,14 @@
                         perferendis libero officia, minus quisquam ipsam ipsum alias sed laborum.</p>
                     </p>
                     </p>
+                    <br>
                     <div class="gap-2 d-md-flex justify-content-md-start">
                         <button href="#" class="btn btn-success btn-lg">Ver mas</button>
                     </div>
                 </div>
-                <div class="col-10 col-sm-8 col-lg-6 d-flex justify-content-center align-items-center">
-                    <img src="Images/gallery-7.jpg" class="img d-block mx-lg-auto img-fluid rounded-4" alt="Acerda de"
-                        width="300" height="300" loading="lazy">
+                <div class="about col-10 col-sm-8 col-lg-6">
+                    <img src="Images/about.png" class="d-block mx-lg-auto img-fluid" alt="about" width="700"
+                        height="500" loading="lazy">
                 </div>
             </div>
         </div>
@@ -98,67 +104,180 @@
     <!-- Services section -->
     <section class="our-services">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <br><br>
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-                        <p style="vertical-align: inherit;">
-                        <p style="vertical-align: inherit;">Nuestros <span style="color: #009970;">Servicios</span>
-                        </p>
-                        </p>
-                    </h1>
-                    <br><br>
+            <div class="container px-4 py-5" id="custom-cards">
+                <h2 class="pb-2 border-bottom text-center display-5 fw-bold">Nuestros <span
+                        style="color: #009970;">Servicios</span></h2>
+
+                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                    <div class="col">
+                        <a href="#" class="text-decoration-none hover:underline">
+                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
+                                style="background-image: url('Images/image_6.jpg');">
+                                <div class="card-overlay"></div>
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
+                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
+                                        <li>
+                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
+                                                class="rounded-circle border border-white">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="text-decoration-none hover:underline">
+                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
+                                style="background-image: url('Images/image_2.jpg');">
+                                <div class="card-overlay"></div>
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to
+                                        multiple lines</h3>
+                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
+                                        <li>
+                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
+                                                class="rounded-circle border border-white">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="text-decoration-none hover:underline">
+                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
+                                style="background-image: url('Images/vacunacion.jpg');">
+                                <div class="card-overlay"></div>
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here
+                                    </h3>
+                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
+                                        <li>
+                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
+                                                class="rounded-circle border border-white">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="text-decoration-none hover:underline">
+                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
+                                style="background-image: url('Images/pricing-3.jpg');">
+                                <div class="card-overlay"></div>
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here
+                                    </h3>
+                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
+                                        <li>
+                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
+                                                class="rounded-circle border border-white">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
+    </section>
+    <!-- End services section -->
+
+    <!-- Gallery section -->
+    <section>
+        <div class="container">
+            <!-- Gallery -->
             <div class="row">
-                <div class="col-lg-7">
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <div class="col">
-                            <div class="card text-center">
-                                <img src="Images/pricing-1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Paseo de mascotas</h5>
+
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal1">
+                        <img src="Images/gallery-1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
+                    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="Images/gallery-1.jpg" class="img-fluid rounded" alt="Imagen-01" />
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card text-center">
-                                <img src="Images/pricing-3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Consulta medica general</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card text-center">
-                                <img src="Images/bg_3.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Lorem, ipsum dolor.</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card text-center">
-                                <img src="Images/image_2.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Aseo de mascotas</h5>
+                    </div>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modal2">
+                        <img src="Images/image_5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
+                    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="Images/image_5.jpg" class="img-fluid rounded" alt="Imagen-02" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="image col-lg-5">  
+
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modal3">
+                        <img src="Images/gallery-7.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
+                    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="Images/gallery-7.jpg" class="img-fluid rounded" alt="Imagen-03" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modal4">
+                        <img src="Images/image_4.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
+                    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="Images/image_4.jpg" class="img-fluid rounded" alt="Imagen-04" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modal5">
+                        <img src="Images/gallery-5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
+                    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="Images/gallery-5.jpg" class="img-fluid rounded" alt="Imagen-05" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modal6">
+                        <img src="Images/about-3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
+                    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="Images/about-3.jpg" class="img-fluid rounded" alt="Imagen-06" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery -->
             </div>
-        </div>
     </section>
-    <!-- End services section -->
+    <!-- End Gallery section -->
 
     <br><br>
     <br><br>
     <script src=" Js/bootstrap.bundle.min.js"
-                    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                    crossorigin="anonymous">
-                    </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
