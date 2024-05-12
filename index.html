@@ -1,283 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AnimalVet</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
     <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/Styles.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/Styles.css" />
     <script src="Js/main.js"></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <img src="Images/Logo.png" alt="AnimalVet" width="40" height="32">
-            <a class="navbar-brand me-auto fs-3" href="index.html">Animal<span style="color: #009970;">Vet</span></a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AnimalVet</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Contacto</a>
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="login-button">Login</a>
-            <button class="navbar-toggler pe-8" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <div class="container-fluid">
+        <img src="Images/Logo.png" alt="AnimalVet" width="40" height="32" />
+        <a class="navbar-brand me-auto fs-3" href="index.html"
+          >Animal<span style="color: #009970">Vet</span></a
+        >
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AnimalVet</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <a href="#" class="login-button">Login</a>
+        <button
+          class="navbar-toggler pe-8"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
     </nav>
     <!-- End Navbar  -->
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
-            <h1>Salud y felicidad para tu mascota</h1>
-            <h2>Conoce mas de nosotros.</h2>
-            <div>
-                <button href="#" class="login-button">Pedir cita</button>
-                <button href="#" class="login-button">Ver Productos</button>
-            </div>
+      <div
+        class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column"
+      >
+        <h1>Salud y felicidad para tu mascota</h1>
+        <h2>Conoce mas de nosotros.</h2>
+        <div>
+          <a href="#" class="btn btn-lg">Pedir cita</a>
+          <a href="#" class="btn btn-lg">Ver Productos</a>
         </div>
+      </div>
     </section>
     <!-- End Hero Section -->
 
     <!-- About section -->
     <section class="About-section">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-                        <p style="vertical-align: inherit;">
-                        <p style="vertical-align: inherit;">Acerca de Animal<span style="color: #009970;">Vet</span>
-                        </p>
-                        </p>
-                    </h1>
-                    <p class="lead">
-                    <p style="vertical-align: inherit;">
-                    <p style="vertical-align: inherit;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                        amet recusandae sapiente. Vitae quibusdam voluptatibus iusto ea labore dolores veniam
-                        perferendis libero officia, minus quisquam ipsam ipsum alias sed laborum.</p>
-                    </p>
-                    </p>
-                    <br>
-                    <div class="gap-2 d-md-flex justify-content-md-start">
-                        <button href="#" class="btn btn-success btn-lg">Ver mas</button>
-                    </div>
-                </div>
-                <div class="about col-10 col-sm-8 col-lg-6">
-                    <img src="Images/about.png" class="d-block mx-lg-auto img-fluid" alt="about" width="700"
-                        height="500" loading="lazy">
-                </div>
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+              <p style="vertical-align: inherit">
+                Acerca de Animal<span style="color: #009970">Vet</span>
+              </p>
+            </h1>
+            <p class="lead"></p>
+            <p style="vertical-align: inherit"></p>
+            <p style="vertical-align: inherit">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet
+              recusandae sapiente. Vitae quibusdam voluptatibus iusto ea labore
+              dolores veniam perferendis libero officia, minus quisquam ipsam
+              ipsum alias sed laborum.
+            </p>
+            <br />
+            <div class="gap-2 d-md-flex justify-content-md-start">
+              <a href="#" class="btn btn-success btn-lg">Ver mas</a>
             </div>
+          </div>
+          <div class="about col-10 col-sm-8 col-lg-6">
+            <img
+              src="Images/about.png"
+              class="d-block mx-lg-auto img-fluid"
+              alt="about"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
         </div>
+      </div>
     </section>
     <!-- End About section -->
 
     <!-- Services section -->
     <section class="our-services">
-        <div class="container">
-            <div class="container px-4 py-5" id="custom-cards">
-                <h2 class="pb-2 border-bottom text-center display-5 fw-bold">Nuestros <span
-                        style="color: #009970;">Servicios</span></h2>
+      <div class="container">
+        <div class="container px-4 py-5" id="custom-cards">
+          <h2
+            class="pb-2 border-bottom text-center text-body-emphasis display-5 fw-bold"
+          >
+            Nuestros <span style="color: #009970">Servicios</span>
+          </h2>
 
-                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                    <div class="col">
-                        <a href="#" class="text-decoration-none hover:underline">
-                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
-                                style="background-image: url('Images/image_6.jpg');">
-                                <div class="card-overlay"></div>
-                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
-                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
-                                        <li>
-                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
-                                                class="rounded-circle border border-white">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col">
-                        <a href="#" class="text-decoration-none hover:underline">
-                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
-                                style="background-image: url('Images/image_2.jpg');">
-                                <div class="card-overlay"></div>
-                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to
-                                        multiple lines</h3>
-                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
-                                        <li>
-                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
-                                                class="rounded-circle border border-white">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col">
-                        <a href="#" class="text-decoration-none hover:underline">
-                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
-                                style="background-image: url('Images/vacunacion.jpg');">
-                                <div class="card-overlay"></div>
-                                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here
-                                    </h3>
-                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
-                                        <li>
-                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
-                                                class="rounded-circle border border-white">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col">
-                        <a href="#" class="text-decoration-none hover:underline">
-                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
-                                style="background-image: url('Images/pricing-3.jpg');">
-                                <div class="card-overlay"></div>
-                                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here
-                                    </h3>
-                                    <ul class="d-flex list-unstyled mt-auto justify-content-center">
-                                        <li>
-                                            <img src="Images/Logo.png" alt="Logo" width="32" height="32"
-                                                class="rounded-circle border border-white">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+          <div
+            class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5"
+          >
+            <div class="col">
+              <a href="#" class="text-decoration-none hover:underline">
+                <div
+                  class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 card-medium"
+                  style="background-image: url('Images/image_6.jpg')"
+                >
+                  <div class="card-overlay"></div>
+                  <div
+                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                  >
+                    <h3
+                      class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold text-center"
+                    >
+                      Caminatas
+                    </h3>
+                    <ul
+                      class="d-flex list-unstyled mt-auto justify-content-center"
+                    >
+                      <li>
+                        <img
+                          src="Images/Logo.png"
+                          alt="Logo"
+                          width="32"
+                          height="32"
+                          class="rounded-circle border border-white"
+                        />
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+              </a>
             </div>
+
+            <div class="col">
+              <a href="#" class="text-decoration-none hover:underline">
+                <div
+                  class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 card-medium"
+                  style="background-image: url('Images/image_2.jpg')"
+                >
+                  <div class="card-overlay"></div>
+                  <div
+                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                  >
+                    <h3
+                      class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold text-center"
+                    >
+                      Aseo y spa
+                    </h3>
+                    <ul
+                      class="d-flex list-unstyled mt-auto justify-content-center"
+                    >
+                      <li>
+                        <img
+                          src="Images/Logo.png"
+                          alt="Logo"
+                          width="32"
+                          height="32"
+                          class="rounded-circle border border-white"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="#" class="text-decoration-none hover:underline">
+                <div
+                  class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 card-medium"
+                  style="background-image: url('Images/vacunacion.jpg')"
+                >
+                  <div class="card-overlay"></div>
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3
+                      class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold text-center"
+                    >
+                      Vacunacion
+                    </h3>
+                    <ul
+                      class="d-flex list-unstyled mt-auto justify-content-center"
+                    >
+                      <li>
+                        <img
+                          src="Images/Logo.png"
+                          alt="Logo"
+                          width="32"
+                          height="32"
+                          class="rounded-circle border border-white"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="#" class="text-decoration-none hover:underline">
+                <div
+                  class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 card-medium"
+                  style="background-image: url('Images/pricing-3.jpg')"
+                >
+                  <div class="card-overlay"></div>
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3
+                      class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold text-center"
+                    >
+                      Atencion medica general
+                    </h3>
+                    <ul
+                      class="d-flex list-unstyled mt-auto justify-content-center"
+                    >
+                      <li>
+                        <img
+                          src="Images/Logo.png"
+                          alt="Logo"
+                          width="32"
+                          height="32"
+                          class="rounded-circle border border-white"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="#" class="btn btn-success btn-lg">ver mas...</a>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End services section -->
 
     <!-- Gallery section -->
-    <section>
-        <div class="container">
-            <!-- Gallery -->
-            <div class="row">
-
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal1">
-                        <img src="Images/gallery-1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
-                    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="Images/gallery-1.jpg" class="img-fluid rounded" alt="Imagen-01" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#modal2">
-                        <img src="Images/image_5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
-                    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="Images/image_5.jpg" class="img-fluid rounded" alt="Imagen-02" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <section class="Gallery">
+      <div class="container">
+        <!-- Gallery -->
+        <div class="row x-4 py-5">
+          <h2
+            class="pb-2 border-bottom text-center text-body-emphasis display-5 fw-bold"
+          >
+            Gale<span style="color: #009970">ria</span>
+          </h2>
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 py-md-5 py-1">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modal1">
+              <img
+                src="Images/gallery-1.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 zoomP"
+                alt="image1"
+            /></a>
+            <div
+              class="modal fade"
+              id="modal1"
+              tabindex="-1"
+              aria-labelledby="modal1Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="Images/gallery-1.jpg"
+                      class="img-fluid rounded"
+                      alt="Imagen-01"
+                    />
+                  </div>
                 </div>
-
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <a href="" data-bs-toggle="modal" data-bs-target="#modal3">
-                        <img src="Images/gallery-7.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
-                    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="Images/gallery-7.jpg" class="img-fluid rounded" alt="Imagen-03" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#modal4">
-                        <img src="Images/image_4.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
-                    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="Images/image_4.jpg" class="img-fluid rounded" alt="Imagen-04" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <a href="" data-bs-toggle="modal" data-bs-target="#modal5">
-                        <img src="Images/gallery-5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
-                    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="Images/gallery-5.jpg" class="img-fluid rounded" alt="Imagen-05" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#modal6">
-                        <img src="Images/about-3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="image1" /></a>
-                    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="Images/about-3.jpg" class="img-fluid rounded" alt="Imagen-06" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery -->
+              </div>
             </div>
+            <a href="" data-bs-toggle="modal" data-bs-target="#modal2">
+              <img
+                src="Images/image_5.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 zoomP"
+                alt="image1"
+            /></a>
+            <div
+              class="modal fade"
+              id="modal2"
+              tabindex="-1"
+              aria-labelledby="modal2Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="Images/image_5.jpg"
+                      class="img-fluid rounded"
+                      alt="Imagen-02"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 py-md-5 py-1">
+            <a href="" data-bs-toggle="modal" data-bs-target="#modal3">
+              <img
+                src="Images/gallery-4.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 zoomP"
+                alt="image1"
+            /></a>
+            <div
+              class="modal fade"
+              id="modal3"
+              tabindex="-1"
+              aria-labelledby="modal3Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="Images/gallery-4.jpg"
+                      class="img-fluid rounded"
+                      alt="Imagen-03"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="" data-bs-toggle="modal" data-bs-target="#modal4">
+              <img
+                src="Images/gallery-2.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 zoomP"
+                alt="image1"
+            /></a>
+            <div
+              class="modal fade"
+              id="modal4"
+              tabindex="-1"
+              aria-labelledby="modal4Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="Images/gallery-2.jpg"
+                      class="img-fluid rounded"
+                      alt="Imagen-04"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 py-md-5 py-1">
+            <a href="" data-bs-toggle="modal" data-bs-target="#modal5">
+              <img
+                src="Images/gallery-5.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 zoomP"
+                alt="image1"
+            /></a>
+            <div
+              class="modal fade"
+              id="modal5"
+              tabindex="-1"
+              aria-labelledby="modal5Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="Images/gallery-5.jpg"
+                      class="img-fluid rounded"
+                      alt="Imagen-05"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="" data-bs-toggle="modal" data-bs-target="#modal6">
+              <img
+                src="Images/gallery-6.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 zoomP"
+                alt="image1"
+            /></a>
+            <div
+              class="modal fade"
+              id="modal6"
+              tabindex="-1"
+              aria-labelledby="modal6Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src="Images/gallery-6.jpg"
+                      class="img-fluid rounded"
+                      alt="Imagen-06"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Gallery -->
+        </div>
+      </div>
     </section>
     <!-- End Gallery section -->
 
-    <br><br>
-    <br><br>
-    <script src=" Js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
-</body>
+    <!-- testimony section -->
+    <section class="testimonials">
+      <div class="container py-5">
+        <h2
+          class="pb-2 border-bottom text-center text-body-emphasis display-5 fw-bold"
+        >
+          Clientes <span style="color: #009970">Felices</span>
+        </h2>
+        <div id="testimonialCarousel" class="carousel slide">
+          <div class="carousel-inner py-5">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="card mx-3 opacity-50">
+                  <div class="card-body text-center">
+                    <img
+                      src="Images/staff-5.jpg"
+                      alt="Hanna Lisem"
+                      class="img rounded-circle mb-3"
+                      style="width: 80px; height: 80px"
+                    />
+                    <h5 class="card-title">Hanna Lisem</h5>
+                    <p class="card-text">
+                      "Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat."
+                    </p>
+                    <div class="ratings">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mx-3 active">
+                  <div class="card-body text-center">
+                    <img
+                      src="Images/staff-6.jpg"
+                      alt="Ronne Galle"
+                      class="img rounded-circle mb-3"
+                      style="width: 80px; height: 80px"
+                    />
+                    <h5 class="card-title">Ronne Galle</h5>
+                    <p class="card-text">
+                      "Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat."
+                    </p>
+                    <div class="ratings">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mx-3 opacity-50">
+                  <div class="card-body text-center">
+                    <img
+                      src="Images/staff-7.jpg"
+                      alt="Missy Limana"
+                      class="img rounded-circle mb-3"
+                      style="width: 80px; height: 80px"
+                    />
+                    <h5 class="card-title">Missy Limana</h5>
+                    <p class="card-text">
+                      "Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat."
+                    </p>
+                    <div class="ratings">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mx-3 opacity-50">
+                  <div class="card-body text-center">
+                    <img
+                      src="Images/about-3.jpg"
+                      alt="Missy Limana"
+                      class="img rounded-circle mb-3"
+                      style="width: 80px; height: 80px"
+                    />
+                    <h5 class="card-title">Alexa Carson</h5>
+                    <p class="card-text">
+                      "Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat."
+                    </p>
+                    <div class="ratings">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators mx-auto mb-3">
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="3"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End testimony section -->
 
+    <br /><br />
+    <br /><br />
+    <script
+      src=" Js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
