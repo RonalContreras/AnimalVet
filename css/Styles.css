@@ -34,7 +34,7 @@
   border: none;
   border-radius: 50px;
   text-decoration: none;
-  transition: all 0.3s background-color;
+  transition: all 0.3s, background-color;
 }
 
 .login-button:hover,
@@ -62,20 +62,20 @@
   font-size: 24px;
 }
 
-.nav-link {
+.navbar .nav-link {
   color: #666777;
   font-weight: bold;
   font-size: 20px;
   position: relative;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: #000;
 }
 
 @media (min-width: 991px) {
-  .nav-link::before {
+  .navbar .nav-link::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -88,8 +88,8 @@
     transition: all, 0.3s ease;
   }
 
-  .nav-link:hover::before,
-  .nav-link.active::before {
+  .navbar .nav-link:hover::before,
+  .navbar .nav-link.active::before {
     width: 100%;
     visibility: visible;
   }
@@ -154,27 +154,44 @@
   background-color: #00b383;
 }
 
-.About-section,
-.Gallery {
+.container1 {
+  padding: 18px;
   background-image: url(../Images/about-background.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.About-section .about {
+.About-section img {
   border-radius: 16px;
 }
 
 .About-section,
 .our-services,
 .Gallery {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+  background-color: #009970;
+}
+
+.Gallery,
+.Contact {
+  padding-bottom: 18px;
+}
+
+.container1,
+.container-services,
+.container-contact {
   box-sizing: border-box;
   width: 98%;
-  margin: 18px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.container-services {
+  background: white;
 }
 
 .card {
@@ -212,6 +229,8 @@
   overflow: auto;
 }
 
+/* Gallery */
+
 .Gallery .border-bottom {
   border-bottom: 1px solid rgba(0, 0, 0, 0.26) !important;
 }
@@ -240,7 +259,7 @@
   background-position: center;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .testimonials .border-bottom {
@@ -252,7 +271,6 @@
   box-shadow: 0 8px 30px -7px #c9dff0;
   margin: 0 20px;
   padding: 0 10px;
-  width: 18rem;
   border-radius: 20px;
   border: 0;
 }
@@ -288,4 +306,29 @@
 
 .carousel-indicators .active {
   background-color: #007bff;
+}
+
+@media (max-width: 767px) {
+  .carousel-small {
+    overflow: auto !important;
+  }
+}
+
+/* Contact section */
+
+.Contact {
+  padding-top: 18px;
+}
+
+.container-contact {
+  background: linear-gradient(45deg, #207dff 0%, #00bd55 100%);
+}
+
+.border-top {
+  color: #000;
+}
+
+/* footer */
+.Footer {
+  background-color: #009970;
 }
