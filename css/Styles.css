@@ -165,6 +165,10 @@
   border-radius: 16px;
 }
 
+.About-section img {
+  mask-image: linear-gradient(white 90%, transparent);
+}
+
 .About-section,
 .our-services,
 .Gallery {
@@ -235,6 +239,14 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.26) !important;
 }
 
+@media (max-width: 576px) {
+  .img-sm-responsive {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
 .modal-body {
   padding: 0;
 }
@@ -259,7 +271,6 @@
   background-position: center;
   background-attachment: fixed;
   width: 100%;
-  /* height: 100vh; */
 }
 
 .testimonials .border-bottom {
@@ -330,24 +341,32 @@
 
 .map-container {
   width: 100%;
-  padding: 20px; /* Espacio interno */
+  padding: 20px;
   box-sizing: border-box;
+  height: auto;
 }
 
 .Contact iframe {
   width: 100%;
-  height: 350px; /* Altura ajustada para dispositivos móviles */
+  height: 350px;
   display: block;
-  margin: 0 auto; /*20px;  Margen inferior para separar del formulario */
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
+  .map-container {
+    height: 500px;
+  }
   .Contact iframe {
-    height: 500px; /* Altura ajustada para pantallas más grandes */
+    height: 100%;
   }
 }
 
 /* footer */
 .Footer {
   background-color: #009970;
+}
+
+.Footer .link-dark:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
 }

@@ -14,7 +14,7 @@ window.onscroll = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Verificar el ancho de la ventana
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth > 992) {
     // 768px punto de corte para pantallas pequeñas
     var myCarousel = document.querySelector("#testimonialCarousel");
     var carousel = new bootstrap.Carousel(myCarousel, {
