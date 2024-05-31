@@ -36,7 +36,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
         <img src="Images/Logo.png" alt="AnimalVet" width="40" height="32" />
-        <a class="navbar-brand me-auto fs-3" href="index.html"
+        <a class="navbar-brand me-auto fs-3" href="#"
           >Animal<span style="color: #009970">Vet</span></a
         >
         <div
@@ -73,7 +73,24 @@
             </ul>
           </div>
         </div>
-        <a href="#" class="login-button">Login</a>
+        <div class="btn-group" role="group">
+          <button
+            type="button"
+            class="login-button dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Login
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="Login" class="dropdown-item">Iniciar sesion</a>
+            </li>
+            <li>
+              <a href="Login/registro.php" class="dropdown-item">Registrarse</a>
+            </li>
+          </ul>
+        </div>
         <button
           class="navbar-toggler pe-8"
           type="button"
@@ -698,7 +715,7 @@
     <section class="Contact">
       <div class="container-contact bg-light pe-lg-5">
         <div class="row">
-          <div class="col-12 col-md-12">
+          <div class="col-12 col-lg-6">
             <div class="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3943.227827495389!2d-75.87673439534953!3d8.764623145950326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1715646280350!5m2!1ses!2sco"

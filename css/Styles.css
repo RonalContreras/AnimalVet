@@ -18,14 +18,24 @@
   font-size: 24px;
 }
 
+.btn-group {
+  border-radius: 50px;
+}
+
 .login-button {
   background-color: #009970;
   color: #fff;
   font-size: 14px;
   padding: 8px 20px;
+  border: none;
   border-radius: 50px;
   text-decoration: none;
-  transition: all 0.3s background-color;
+  transition: all 0.3s, background-color;
+}
+
+.dropdown-item:hover {
+  background-color: #009970;
+  color: #fff;
 }
 
 .btn {
