@@ -19,3 +19,6 @@ try {
 
 
 $URL = "http://localhost/AnimalVet";
+
+date_default_timezone_set("America/Bogota");
+$fecha_Hora = date('y-m-d H:i:s');

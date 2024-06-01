@@ -3,10 +3,7 @@ include ('../app/config.php');
 include ('../admin/layout/parte1.php'); ?>
 
 
-<?php include ('../admin/layout/parte2.php');
-
-
-
-
-
-
+<?php
+include ('../admin/layout/parte2.php');
+include ('../admin/layout/mensaje.php');
+?>

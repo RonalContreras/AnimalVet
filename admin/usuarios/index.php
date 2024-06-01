@@ -16,7 +16,7 @@ include ('../../app/controllers/usuarios/listado_usuarios.php'); ?>
             </div>
 
             <div class="card-body">
-                <table class="table table-responsive table-striped table-bordered table-hover">
+                <table id="example1" class="table table-striped table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">N°</th>
@@ -28,17 +28,26 @@ include ('../../app/controllers/usuarios/listado_usuarios.php'); ?>
                     </thead>
                     <tbody>
                         <?php
-                        foreach ($usuarios as $usuario) { ?>
+                        $contador = 0;
+                        foreach ($usuarios as $usuario) {
+                            $contador = $contador + 1;
+                            $id_usuario = $usuario['id_usuario']; ?>
                             <tr>
-                                <th scope="row"><?php echo $usuario['id_usuario'] ?></th>
-                                <td><?php echo $usuario['nombre_completo'] ?></td>
-                                <td><?php echo $usuario['email'] ?></td>
-                                <td><?php echo $usuario['cargo'] ?></td>
+                                <th scope="row"><?php echo $contador; ?></th>
+                                <td><?php echo $usuario['nombre_completo']; ?></td>
+                                <td><?php echo $usuario['email']; ?></td>
+                                <td><?php echo $usuario['cargo']; ?></td>
                                 <td>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary">Ver</button>
-                                        <button type="button" class="btn btn-success">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                    <div class="btn-group d-flex justify-content-center" role="group"
+                                        aria-label="Basic example">
+                                        <a href="show.php?id_usuario=<?php echo $id_usuario; ?>" class="btn btn-primary"><i
+                                                class="bi bi-eye-fill"></i>
+                                            Ver</a>
+                                        <a href="update.php?id_usuario=<?php echo $id_usuario; ?>" type="button"
+                                            class="btn btn-success"><i class="bi bi-pencil-square"></i>
+                                            Editar</a>
+                                        <a href="#" type="button" class="btn btn-danger"><i class="bi bi-trash3-fill"></i>
+                                            Eliminar</a>
                                     </div>
                                 </td>
                             </tr>
@@ -55,4 +64,55 @@ include ('../../app/controllers/usuarios/listado_usuarios.php'); ?>
     </div>
 </div>
 
-<?php include ('../../admin/layout/parte2.php');
+<?php
+include ('../../admin/layout/parte2.php');
+include ('../../admin/layout/mensaje.php');
+?>
+
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "pageLength": 5,
+            "language": {
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Usuarios",
+                "infoEmpty": "Msotrando 0 a 0 de 0 Usuarios",
+                "infoFiltered": "(Filtrado de _MAX_ total Usuarios",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Usuarios",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscador:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+            "responsive": true, "lengthChange": true, "autoWidth": false,
+            buttons: [
+                {
+                    extend: "collection",
+                    text: "Reportes",
+                    orientation: "landscape",
+                    buttons: [
+                        { text: "Copiar", extend: "copy" },
+                        { extend: "pdf" },
+                        { extend: "csv" },
+                        { extend: "excel" },
+                        { text: "Imprimir", extend: "print" }
+                    ]
+                },
+                {
+                    extend: "colvis",
+                    text: "Visor de columnas",
+                    /* collectionLayout: "fixed three-column" */
+
+                }
+            ],
+        }).buttons().container().appendTo("#example1_wrapper .col-md-6:eq(0)");
+    });
+</script>

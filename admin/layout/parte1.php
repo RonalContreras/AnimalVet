@@ -26,6 +26,19 @@ if (isset($_SESSION['sesion_email'])) {
         href="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+    <!-- jQuery -->
+    <script src="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet"
+        href="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -126,7 +139,7 @@ if (isset($_SESSION['sesion_email'])) {
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link bg-success active">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
                                     Usuarios
