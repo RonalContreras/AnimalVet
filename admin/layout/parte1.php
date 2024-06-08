@@ -3,6 +3,14 @@
 session_start();
 
 if (isset($_SESSION['sesion_email'])) {
+    $email_session = $_SESSION['sesion_email'];
+    $sql = "SELECT * FROM tb_usuarios WHERE email = '$email_session'";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($usuarios as $usuario) {
+        $id_usuario_session = $usuario['id_usuario'];
+    }
 
 } else {
     header('location: ' . $URL . '/login');
@@ -39,6 +47,7 @@ if (isset($_SESSION['sesion_email'])) {
         href="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -157,6 +166,29 @@ if (isset($_SESSION['sesion_email'])) {
                                     <a href="<?php echo $URL; ?>/admin/usuarios/create.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Nuevo usuario</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link bg-warning active">
+                                <i class="nav-icon fas fa-clipboard"></i>
+                                <p>
+                                    Productos
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="<?php echo $URL; ?>/admin/productos" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tabla de productos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?php echo $URL; ?>/admin/productos/create.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Nuevo producto</p>
                                     </a>
                                 </li>
                             </ul>

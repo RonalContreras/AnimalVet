@@ -1,17 +1,17 @@
 <?php
 include ('../../app/config.php');
 include ('../../admin/layout/parte1.php');
-include ('../../app/controllers/usuarios/listado_usuarios.php'); ?>
+include ('../../app/controllers/productos/listado_productos.php'); ?>
 
 <div class="container-fluid pt-3">
-    <h1>Listado de usuarios</h1>
+    <h1>Listado de productos</h1>
 </div>
 
-<div class="row px-2">
+<div class="row">
     <div class="col-md-12">
-        <div class="card card-outline card-success">
+        <div class="card card-outline card-warning">
             <div class="card-header">
-                <h3 class="card-title font-weight-bold">Usuarios registrados</h3>
+                <h3 class="card-title font-weight-bold">productos registrados</h3>
 
             </div>
 
@@ -20,43 +20,55 @@ include ('../../app/controllers/usuarios/listado_usuarios.php'); ?>
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">N°</th>
-                            <th scope="col">Nombre completo</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">cargo</th>
+                            <th scope="col">Nombre del producto</th>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">precio compra</th>
+                            <th scope="col">precio venta</th>
+                            <th scope="col">fecha de ingreso</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         $contador = 0;
-                        foreach ($usuarios as $usuario) {
+                        foreach ($productos as $producto) {
                             $contador = $contador + 1;
-                            $id_usuario = $usuario['id_usuario']; ?>
+                            $id_producto = $producto['id_producto']; ?>
+
                             <tr>
-                                <th scope="row"><?php echo $contador; ?></th>
-                                <td><?php echo $usuario['nombre_completo']; ?></td>
-                                <td><?php echo $usuario['email']; ?></td>
-                                <td><?php echo $usuario['cargo']; ?></td>
-                                <td>
-                                    <div class="btn-group d-flex justify-content-center" role="group"
-                                        aria-label="Basic example">
-                                        <a href="show.php?id_usuario=<?php echo $id_usuario; ?>" class="btn btn-primary"><i
-                                                class="bi bi-eye-fill"></i>
+                                <th scope="row"><?= $contador; ?></th>
+                                <td><?= $producto['codigo']; ?></td>
+                                <td><?= $producto['nombre_producto']; ?></td>
+                                <td><?= $producto['descripcion']; ?></td>
+                                <td><img src="<?= $URL . "/Images/productos/" . $producto['imagen']; ?>" width="80px"
+                                        alt="">
+                                </td>
+                                <td><?= $producto['stock']; ?></td>
+                                <td><?= $producto['precio_compra']; ?></td>
+                                <td><?= $producto['precio_venta']; ?></td>
+                                <td><?= $producto['fecha_ingreso']; ?></td>
+                                <td style="text-align: center">
+                                    <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                                        <a href="show.php?id_producto=<?php echo $id_producto; ?>"
+                                            class="btn btn-primary"><i class="bi bi-eye-fill"></i>
                                             Ver</a>
-                                        <a href="update.php?id_usuario=<?php echo $id_usuario; ?>" type="button"
+                                        <a href="update.php?id_producto=<?php echo $id_producto; ?>" type="button"
                                             class="btn btn-success"><i class="bi bi-pencil-square"></i>
                                             Editar</a>
                                         <button type="button" class="btn btn-danger"
-                                            onclick="confirmDeletion(<?php echo $id_usuario; ?>)"><i
+                                            onclick="confirmDeletion(<?php echo $id_producto; ?>)"><i
                                                 class="bi bi-trash3-fill"></i>
                                             Eliminar</button>
                                     </div>
                                 </td>
                             </tr>
                             <?php
+
                         }
                         ?>
-
                     </tbody>
                 </table>
             </div>
@@ -66,23 +78,24 @@ include ('../../app/controllers/usuarios/listado_usuarios.php'); ?>
     </div>
 </div>
 
+
+
 <?php
 include ('../../admin/layout/parte2.php');
 include ('../../admin/layout/mensaje.php');
 ?>
-
 <script>
     $(function () {
         $("#example1").DataTable({
             "pageLength": 5,
             "language": {
                 "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Usuarios",
-                "infoEmpty": "Msotrando 0 a 0 de 0 Usuarios",
-                "infoFiltered": "(Filtrado de _MAX_ total Usuarios",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ productos",
+                "infoEmpty": "Msotrando 0 a 0 de 0 productos",
+                "infoFiltered": "(Filtrado de _MAX_ total productos",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Usuarios",
+                "lengthMenu": "Mostrar _MENU_ productos",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscador:",
@@ -117,7 +130,7 @@ include ('../../admin/layout/mensaje.php');
             ],
         }).buttons().container().appendTo("#example1_wrapper .col-md-6:eq(0)");
     });
-    function confirmDeletion(id_usuario) {
+    function confirmDeletion(id_producto) {
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
                 confirmButton: "btn btn-success",
@@ -135,7 +148,7 @@ include ('../../admin/layout/mensaje.php');
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "../../app/controllers/usuarios/delete_controller.php?id_usuario=" + id_usuario;
+                window.location.href = "../../app/controllers/productos/delete_controller.php?id_producto=" + id_producto;
             }
         });
     }

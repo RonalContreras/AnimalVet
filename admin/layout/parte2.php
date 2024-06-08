@@ -41,7 +41,6 @@
 <script src="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script
     src="<?php echo $URL; ?>/Templeates/AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-
 </body>
 
 </html>
